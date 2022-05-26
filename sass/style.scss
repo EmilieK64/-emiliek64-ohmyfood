@@ -1,0 +1,25 @@
+@import "./utils/variables";
+@import "./utils/maps";
+@import "./utils/mixins";
+@import "./utils/keyframes";
+/*a loop in "./pages/restaurants_pages*/
+
+@import "./base/basis";
+@import "./base/normalize";
+@import "./base/typography";
+
+@import "./layout/header";
+@import "./layout/container";
+@import "./layout/form";
+@import "./layout/links";
+@import "./layout/footer";
+@import "./layout/navs";
+
+@import "./components/buttons";
+@import "./components/icons";
+
+@import "./pages/homepage";
+@import "./pages/restaurants_pages";
+
+
+ 

@@ -1,0 +1,13 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "sass": "sass ./sass/style.scss:./sass/prefixed/style.css -w --style compressed",
+  "prefix": "postcss ./sass/prefixed/style.css --use autoprefixer -d ./sass/prefixed/"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+  }
