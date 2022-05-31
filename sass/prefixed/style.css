@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @keyframes loading-spinner-glass-toast {
   0% {
     transform: translateX(0%);
@@ -80,7 +79,6 @@
     transform: rotate(0deg);
   }
 }
-/*a loop in "./pages/restaurants_pages*/
 body {
   background-color: #FFFFFF;
   word-wrap: break-word;
@@ -434,6 +432,117 @@ template {
   display: none;
 }
 
+.btn {
+  cursor: pointer;
+  margin-top: 8px;
+  margin-bottom: 44px;
+  width: 245px;
+  height: 50px;
+  border-radius: 25px 25px 25px 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  color: #FFFFFF;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  box-shadow: 4px 3px 8px #aaaaaa;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (min-width: 1100px) {
+  .btn {
+    margin-right: 7px;
+    width: 200px;
+  }
+}
+@media screen and (min-width: 1277px) {
+  .btn {
+    width: 116px;
+    border-radius: 20px 20px 20px 20px;
+  }
+}
+.btn:hover::after {
+  opacity: 1;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 2px 5px 10px #777777;
+  background: linear-gradient(to top, #fface8, #ae80e5);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 2000ms;
+  border-radius: 25px 25px 25px 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .btn--welcome-page {
+    display: none;
+  }
+}
+
+.btn--welcome-page-responsive {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .btn--welcome-page-responsive {
+    display: flex;
+    margin: 10px 0px 10px 0px;
+    border-radius: 0px 25px 25px 0px;
+  }
+  .btn--welcome-page-responsive::after {
+    border-radius: 0px 25px 25px 0px;
+  }
+}
+@media screen and (min-width: 1277px) {
+  .btn--welcome-page-responsive {
+    width: 200px;
+  }
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.heart-icon-place {
+  position: relative;
+}
+
+.fas-heart, .far-heart {
+  font-size: 25px;
+  position: absolute;
+  left: 4px;
+  bottom: 29px;
+  cursor: pointer;
+}
+
+.fas-heart {
+  color: transparent;
+  background-image: linear-gradient(to top, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 1500ms ease-in-out;
+}
+.fas-heart:active {
+  opacity: 1;
+  transform: scale(1.1, 1.1);
+}
+@media screen and (min-width: 1100px) {
+  .fas-heart:hover {
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+  }
+}
+
+.far-heart {
+  color: #c3c3c3;
+}
+
 .header {
   display: flex;
   background-color: #FFFFFF;
@@ -485,7 +594,6 @@ template {
 .form_location-field {
   display: flex;
   background-color: #dddddd;
-  /*vérifier que l-syntaxe ok*/
   justify-content: center;
   width: 100%;
   margin-bottom: 10px;
@@ -499,7 +607,6 @@ template {
 }
 .form_location-text {
   background-color: #dddddd;
-  /*vérifier que la syntaxe ok*/
   font-size: 17px;
   border: none;
   margin-top: 10px;
@@ -653,105 +760,6 @@ template {
   margin-top: 5px;
 }
 
-.btn {
-  cursor: pointer;
-  margin-top: 8px;
-  margin-bottom: 44px;
-  width: 245px;
-  height: 50px;
-  border-radius: 25px 25px 25px 25px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  border: none;
-  color: #FFFFFF;
-  align-items: center;
-  justify-content: center;
-  font-size: 17px;
-  box-shadow: 4px 3px 8px #aaaaaa;
-  position: relative;
-  z-index: 1;
-}
-@media screen and (min-width: 1100px) {
-  .btn {
-    margin-right: 7px;
-  }
-}
-.btn:hover::after {
-  opacity: 1;
-}
-.btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  box-shadow: 2px 5px 10px #777777;
-  background: linear-gradient(to top, #fface8, #ae80e5);
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 2000ms;
-  border-radius: 25px 25px 25px 25px;
-}
-
-@media screen and (min-width: 768px) {
-  .btn--welcome-page {
-    display: none;
-  }
-}
-
-.btn--welcome-page-responsive {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .btn--welcome-page-responsive {
-    display: flex;
-    margin: 10px 0px 10px 0px;
-    border-radius: 0px 25px 25px 0px;
-  }
-  .btn--welcome-page-responsive::after {
-    border-radius: 0px 25px 25px 0px;
-  }
-}
-
-.icon {
-  font-size: 20px;
-}
-
-.heart-icon-place {
-  position: relative;
-}
-
-.fas-heart, .far-heart {
-  font-size: 25px;
-  position: absolute;
-  left: 4px;
-  bottom: 29px;
-  cursor: pointer;
-}
-
-.fas-heart {
-  color: transparent;
-  background-image: linear-gradient(to top, #FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-  transition: all 1500ms ease-in-out;
-}
-.fas-heart:active {
-  opacity: 1;
-  transform: scale(1.1, 1.1);
-}
-@media screen and (min-width: 1100px) {
-  .fas-heart:hover {
-    opacity: 1;
-    transform: scale(1.1, 1.1);
-  }
-}
-
-.far-heart {
-  color: #c3c3c3;
-}
-
 .loading-spinner {
   display: flex;
   align-items: center;
@@ -779,14 +787,12 @@ template {
   font-weight: bold;
   animation: loading-spinner-glass-toast 2000ms 100ms infinite linear;
   color: #99E2D0;
-  animation-iteration-count: 2;
 }
 .loading-spinner > .fa-martini-glass-citrus--right {
   font-size: 50px;
   font-weight: bold;
   color: #99E2D0;
   animation: loading-spinner-glass-toast-reverse 2000ms 100ms infinite linear reverse;
-  animation-iteration-count: 2;
 }
 
 .welcome-page-heading {
@@ -1019,7 +1025,8 @@ template {
 }
 @media screen and (min-width: 1277px) {
   .menu-step_comments_field {
-    width: 320px;
+    width: 352px;
+    height: 83px;
   }
 }
 .menu-step_comments_field:active > .menu-step_comments_field_price-selection-field {
@@ -1027,14 +1034,11 @@ template {
 }
 .menu-step_comments_field:active > .menu-step_comments_field_price-selection-field > .menu-step_comments_field_price-selection-field_selection {
   opacity: 1;
-  transition: opacity 100ms;
 }
 .menu-step_comments_field:active > .menu-step_comments_field_price-selection-field > .menu-step_comments_field_price-selection-field_selection > .check-icon {
   animation: rotation-three-quarters 1000ms 150ms;
   background-color: #99E2D0;
   color: #FFFFFF;
-  background-clip: text;
-  -webkit-background-clip: text;
   border-radius: 25px 25px 25px 25px;
 }
 @media screen and (min-width: 768px) {
@@ -1043,14 +1047,11 @@ template {
   }
   .menu-step_comments_field:hover > .menu-step_comments_field_price-selection-field > .menu-step_comments_field_price-selection-field_selection {
     opacity: 1;
-    transition: opacity 1000ms 50ms;
   }
   .menu-step_comments_field:hover > .menu-step_comments_field_price-selection-field > .menu-step_comments_field_price-selection-field_selection > .check-icon {
     animation: rotation-three-quarters 1000ms 150ms;
     background-color: #99E2D0;
     color: #FFFFFF;
-    background-clip: text;
-    -webkit-background-clip: text;
     border-radius: 25px 25px 25px 25px;
   }
 }
@@ -1078,6 +1079,12 @@ template {
     margin-top: 10px;
   }
 }
+@media screen and (min-width: 1277px) {
+  .menu-step_comments_field_details_name {
+    white-space: nowrap;
+    padding-top: 10px;
+  }
+}
 .menu-step_comments_field_details_additionnal-information {
   font-size: 15px;
   margin-top: 5px;
@@ -1090,6 +1097,12 @@ template {
     white-space: normal;
     height: 40px;
     margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1277px) {
+  .menu-step_comments_field_details_additionnal-information {
+    white-space: nowrap;
+    margin-bottom: 25px;
   }
 }
 .menu-step_comments_field_price-selection-field {

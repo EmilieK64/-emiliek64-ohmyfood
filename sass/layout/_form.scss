@@ -8,7 +8,7 @@
     }
     &_location-field {
         display:flex;
-        background-color:$color-frames-secondary;/*vérifier que l-syntaxe ok*/
+        background-color:$color-frames-secondary;
         justify-content:center;
         width:100%;
         margin-bottom:10px;
@@ -19,7 +19,7 @@
         }
     }
     &_location-text {
-            background-color: $color-frames-secondary;/*vérifier que la syntaxe ok*/
+            background-color: $color-frames-secondary;
             font-size: $font-size-primary;
             border:none;
             margin-top:10px;
